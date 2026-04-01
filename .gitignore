@@ -1,0 +1,26 @@
+# Ignore dataset inside Q2
+Q2/data/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+venv/
+.venv/
+env/
+dl-env/
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Outputs (optional but recommended)
+Q2/outputs/
+*.pth
+*.pt
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
