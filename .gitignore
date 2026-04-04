@@ -1,6 +1,11 @@
 # Ignore dataset inside Q2
 Q2/data/
 
+# Ignore dataset inside Project
+Project/dataset
+Project/dataset_split
+Project/raw_images
+
 # Python cache
 __pycache__/
 *.py[cod]
