@@ -5,15 +5,28 @@ import matplotlib.pyplot as plt
 def f(x, y):
     return (x - 3)**2 + (y + 2)**2
 
-# Partial derivatives
+
+
+#The gradient consists of the partial derivatives:
+#    ∂f/∂x = 2(x - 3)
+#    ∂f/∂y = 2(y + 2)
 def grad_f(x, y):
+    """    Computes the gradient of the function:
+    f(x, y) = (x - 3)^2 + (y + 2)^2
+    
+        Parameters:
+        x (float): current x value
+        y (float): current y value
+    """
+    # Partial derivative with respect to x
     dfdx = 2 * (x - 3)
+    # Partial derivative with respect to y
     dfdy = 2 * (y + 2)
     return dfdx, dfdy
 
 # Gradient descent
-learning_rate = 0.1
-num_iterations = 50
+learning_rate = 0.1 # Step size
+num_iterations = 50 # Number of gradient descent updates
 
 # Initial values
 x, y = 0.0, 0.0
@@ -23,16 +36,21 @@ x_history = [x]
 y_history = [y]
 loss_history = [f(x, y)]
 
+# Gradient descent loop
 for i in range(num_iterations):
+    # Compute the gradient at the current point
     dfdx, dfdy = grad_f(x, y)
 
+    # Update x and y by moving opposite to the gradient
     x = x - learning_rate * dfdx
     y = y - learning_rate * dfdy
 
+    #Store new values
     x_history.append(x)
     y_history.append(y)
     loss_history.append(f(x, y))
 
+# Final approximation of the minimum
 print(f"Final x: {x:.6f}")
 print(f"Final y: {y:.6f}")
 print(f"Final function value: {f(x, y):.6f}")

@@ -1,0 +1,6 @@
+Model,Epochs Completed,Final Train Loss,Final Train Acc,Final Val Loss,Final Val Acc,Best Val Acc,Best Val Acc Epoch,Best Val Loss,Best Val Loss Epoch
+EfficientNet,12,0.1109,0.9671,0.5345,0.8556,0.8556,12,0.5149,6
+ResNet-50,12,0.0222,0.9946,0.6335,0.8526,0.8526,12,0.5764,3
+DenseNet-121,12,0.0406,0.9903,0.6503,0.8326,0.8328,11,0.6277,11
+VGG-19,12,0.7977,0.7593,1.1259,0.6964,0.6964,12,1.1259,12
+CustomCNN,89,1.4623,0.586,1.3676,0.6168,0.6236,81,1.3621,87
